@@ -1,47 +1,74 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <div id="hamburger" @click="toggleMenu">
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
+    </div>
+    <app-menu v-if="isMenuOpen"></app-menu>
+    <router-view id="content"></router-view>
+    <appFooter></appFooter>
   </div>
 </template>
 
 <script>
+import about from './components/about.vue';
+import workplaces from './components/workplaces.vue';
+import footer from './components/footer.vue';
+import menu from './components/menu.vue';
 export default {
-  name: 'app',
-  data () {
+
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      isMenuOpen : false
+    }
+  },
+
+  components: {
+    appAbout: about,
+    appWorkplaces: workplaces,
+    appFooter: footer,
+    appMenu: menu
+  },
+
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+      if (this.isMenuOpen)
+        document.getElementById('app').style.marginLeft = '250px';
+      else 
+        document.getElementById('app').style.marginLeft = '0px';
     }
   }
 }
 </script>
 
 <style>
+
+@font-face {
+  font-family: ness;
+  src: url('./media/ness.ttf');
+}
+
+#hamburger {
+  position: relative;
+  float: left;
+  cursor: pointer;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: ness, 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #5c6e80;
+  margin-top: 50px;
+  padding-left: 20px;
 }
 
 h1, h2 {
+  color: #FF64FF;
   font-weight: normal;
+  text-align: center;
 }
 
 ul {
@@ -54,7 +81,28 @@ li {
   margin: 0 10px;
 }
 
-a {
-  color: #42b983;
+body {
+  background-color: #333;
+  color: #ccc;
 }
+
+hr {
+  border-color: #171717;
+}
+
+.hamburger {
+  width: 35px;
+  height: 5px;
+  background-color: #171717;
+  margin: 6px 0;
+}
+
+a, a:visited {
+  color: #FF64FF;
+}
+
+.pagetitle {
+  color: #FEED23;
+}
+
 </style>
