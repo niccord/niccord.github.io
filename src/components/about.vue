@@ -10,7 +10,14 @@
         <br>
         <h1 class="pagetitle">Hot</h1>
         <div class="hot">
-        <app-card v-for="i in 4"></app-card>
+            <app-card v-for="i in 5"></app-card>
+        </div>
+        <h1 class="pagetitle">Others</h1>
+        <div class="searchbar">
+            <input type="text" name="search" id="search" title="Search" placeholder="Search" >
+        </div>
+        <div class="others">
+            <app-card v-for="i in 15"></app-card>
         </div>
     </div>
 </template>
@@ -25,9 +32,20 @@ export default {
 }
 </script>
 
-
 <style>
-    .hot {
-        display: flex
+    .hot, .searchbar, .others {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+    
+    .searchbar > input {
+        background-color: white;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 8px;
+        border-width: 0px;
+        width: 350px;
+    }
+
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div class="title">Javascript</div>
-        <div class="rate">★★★★★</div>
+        <div class="rate" title="this is why">★★★★★</div>
     </div>
 </template>
 
@@ -16,7 +16,6 @@
         text-align: center;
         font-size: 150%;
         font-weight: bold;
-        size: 50%;
         padding: 10px;
     }
 
