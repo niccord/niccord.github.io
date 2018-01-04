@@ -3,8 +3,8 @@
         <ul>
             <li><router-link to="/">Home</router-link></li>
             <li><router-link to="/workplaces">Experience</router-link></li>
-            <li>Studies</li>
-            <li>Other</li>
+            <li><router-link to="/studies">Studies</router-link></li>
+            <li><router-link to="/other">Other</router-link></li>
         </ul>
     </div>
 </template>

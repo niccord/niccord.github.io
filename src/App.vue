@@ -51,7 +51,7 @@ export default {
 }
 
 #hamburger {
-  position: relative;
+  position: absolute;
   float: left;
   cursor: pointer;
 }
