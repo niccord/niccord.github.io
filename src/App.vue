@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <div id="hamburger" @click="toggleMenu">
+  <div id="app" :style="{ marginLeft: leftMargin}">
+    <div id="hamburger" @click="isMenuOpen = !isMenuOpen">
       <div class="hamburger"></div>
       <div class="hamburger"></div>
       <div class="hamburger"></div>
@@ -16,11 +16,18 @@ import about from './components/about.vue';
 import workplaces from './components/workplaces.vue';
 import footer from './components/footer.vue';
 import menu from './components/menu.vue';
+
 export default {
 
   data() {
     return {
       isMenuOpen : false
+    }
+  },
+
+  computed: {
+    leftMargin() {
+      return (this.isMenuOpen ? '250' : '0') + 'px';
     }
   },
 
@@ -32,13 +39,6 @@ export default {
   },
 
   methods: {
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
-      if (this.isMenuOpen)
-        document.getElementById('app').style.marginLeft = '250px';
-      else 
-        document.getElementById('app').style.marginLeft = '0px';
-    }
   }
 }
 </script>
@@ -51,7 +51,7 @@ export default {
 }
 
 #hamburger {
-  position: absolute;
+  position: fixed;
   float: left;
   cursor: pointer;
 }
@@ -103,6 +103,10 @@ a, a:visited {
 
 .pagetitle {
   color: #FEED23;
+}
+
+#content {
+  margin-left: 40px;
 }
 
 </style>
