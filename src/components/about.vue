@@ -10,15 +10,15 @@
         <br>
         <h1 class="pagetitle">Hot</h1>
         <div class="hot">
-            <app-card v-for="i in hot" :name="i.name" :rate="i.rate" :title="i.title"></app-card>
+            <app-card v-for="i in hot" :name="i.name" :rate="i.rate" :title="i.title" :tags="i.tags"></app-card>
         </div>
         <h1 class="pagetitle">Others</h1>
         <div class="searchbar">
             <input type="text" v-model.trim="search" name="search" id="search" title="Search" placeholder="Search" >
         </div>
         <div class="others">
-            <app-card v-if="search == ''" v-for="i in others" :name="i.name" :rate="i.rate" :title="i.title"></app-card>
-            <app-card v-if="search != ''" v-for="i in 15" :name="'n'" :rate="3" :title="'tt'"></app-card>
+            <app-card v-if="search == ''" v-for="i in others" :name="i.name" :rate="i.rate" :title="i.title" :tags="i.tags"></app-card>
+            <app-card v-if="search != ''" v-for="i in 15" :name="'n'" :rate="3" :title="'tt'" :tags="'tags'"></app-card>
         </div>
     </div>
 </template>
@@ -30,11 +30,12 @@ export default {
     data() {
         return {
             hot: [
-                { name: 'Javascript', rate: 5, title: 'This is why'}
+                { name: 'Javascript', rate: 5, title: 'Deep knoledge of almost every aspect of the language', info:'vanilla, angularjs and vue'},
+                { name: 'C#', rate: 5, title: 'Used for many years in a first real world project in my very first work for a company', info: 'Lambda functions ftw!'},
+                { name: 'Java', rate: 5, title: 'Used for years and years', info: 'I learned programming in Java many years ago', tags: ['1', '2', '3', '4']}
             ],
             others: [
                 { name: 'CSS', rate: 3, title: 'Still learning a lot'},
-                { name: 'C#', rate: 5, title: 'Lambda functions ftw!'},
                 { name: 'C#', rate: 5, title: 'Lambda functions ftw!'},
                 { name: 'C#', rate: 5, title: 'Lambda functions ftw!'},
                 { name: 'C#', rate: 5, title: 'Lambda functions ftw!'},

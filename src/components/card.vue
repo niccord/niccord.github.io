@@ -1,14 +1,18 @@
 <template>
-    <div class="card" :title="title">
+    <div class="card" :title="info">
         <div class="title">{{name}}</div>
         <div class="rate">{{stars}}</div>
+        <div class="subtitle">{{title}}</div>
+        <div v-if="tags" class="tags">
+            <span class="tag" v-for="tag in tags">{{tag}}</span>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
     props: [
-        'name', 'rate', 'title'
+        'name', 'rate', 'title', 'info', 'tags'
     ],
     computed: {
         stars() {
@@ -33,9 +37,24 @@ export default {
     }
     .card > * {
         text-align: center;
+        padding: 10px 5px 20px 5px;
+    }
+
+    .title, .rate {
         font-size: 150%;
         font-weight: bold;
-        padding: 10px 5px 20px 5px;
+    }
+
+    .tags {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tag {
+        flex: 1;
+        background-color: lightblue;
+        border-radius: 5px;
+        margin: 3px;
     }
 
 </style>
