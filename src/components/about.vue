@@ -31,20 +31,18 @@ export default {
         return {
             hot: [
                 { name: 'Javascript', rate: 5, title: 'Deep knoledge of almost every aspect of the language', info:'take a look at the source on my public repository on github, just to be sure', tags: ['vanilla', 'angular.js', 'Vue.js', 'ES6', 'Promises']},
-                { name: 'C#', rate: 5, title: 'Used for many years in a first real world project in my very first work for a company', info: 'Lambda functions ftw!', tags: ['Client - Server', 'Web applications']},
+                { name: 'C#', rate: 5, title: 'Used for many years in a real world project in my very first work for a company', info: 'Lambda functions ftw!', tags: ['Client - Server', 'Web applications']},
                 { name: 'Java', rate: 5, title: 'Used for years and years', info: 'I learned programming in Java many many years ago', tags: ['SpringMVC', 'Hibernate']},
                 { name: 'SQL', rate: 5, title: 'Used and studied a lot from simple queries to stored procedures always with an eye on performance', info: 'Someone said CLR stored procedures?', tags: ['SQLServer', 'Oracle', 'MySql']}
             ],
             others: [
-                { name: 'CSS', rate: 3, title: 'Still learning a lot'},
-                { name: 'C#', rate: 5, title: 'Lambda functions ftw!'},
-                { name: 'C#', rate: 5, title: 'Lambda functions ftw!'},
-                { name: 'C#', rate: 5, title: 'Lambda functions ftw!'},
-                { name: 'C#', rate: 5, title: 'Lambda functions ftw!'},
-                { name: 'C#', rate: 5, title: 'Lambda functions ftw!'}
+                { name: 'CSS', rate: 3, title: 'Still learning a lot', info: 'Not my primary job, but I can do a thing or two :)', tags: ['CSS3', 'Animations', 'Flexbox']},
+                { name: 'GIT', rate: 4, title: 'I know how to use it and how to solve problems when they happens. I were the "git guy" at some point of my life', info: '"Delete your folder and clone it again" wasn\'t my first idea, too!', tags: ['Git from command line', 'Sourcetree']},
+                { name: 'Algorithms and Data Structures', rate: 4, title: 'Studied at university in a very deep way', info: 'It\'s a tough job, but someone has to do it', tags: ['Complexity', 'Efficiency']},
+                { name: 'Node.js and npm', rate: 4, title: 'Used both of them a lot for work and sideprojects, also to manage libraries', info: 'npm install auto-write-website-info --save-dev', tags: ['Express', 'npm install', 'Sails.js', 'gunDB', 'package.json']},
             ],
             searchResults: [
-                { name: 'CSS', rate: 3, title: 'Still learning a lot'},
+                { name: 'TODO', rate: 1, title: 'I haven\'t implemented this feature, yet :(', info: 'Soon, promise', tags: ['//TODO', 'Set-reminder', 'Set-alarm-at-5-am']},
             ],
             search: ''
         }

@@ -33,7 +33,7 @@ export default {
         border-radius: 10px;
         margin: 15px;
         flex: 1;
-        max-width: 200px;
+        max-width: 300px;
         display: flex;
         flex-direction: column;
     }
@@ -46,7 +46,7 @@ export default {
         font-size: 150%;
         font-weight: bold;
     }
-
+    
     .tags {
         display: flex;
         justify-content: center;
