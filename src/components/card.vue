@@ -1,10 +1,10 @@
 <template>
-    <div class="card" :title="info">
-        <div class="title">{{name}}</div>
+    <div class="card" :title="tech.info">
+        <div class="title">{{tech.name}}</div>
         <div class="rate">{{stars}}</div>
-        <div class="subtitle">{{title}}</div>
-        <div v-if="tags" class="tags">
-            <span class="tag" v-for="tag in tags">{{tag}}</span>
+        <div class="subtitle">{{tech.title}}</div>
+        <div v-if="tech.tags" class="tags">
+            <span class="tag" v-for="tag in tech.tags">{{tag}}</span>
         </div>
     </div>
 </template>
@@ -12,13 +12,13 @@
 <script>
 export default {
     props: [
-        'name', 'rate', 'title', 'info', 'tags'
+        'tech'
     ],
     computed: {
         stars() {
             let starstring = '';
             for (let index = 0; index < 5; index++) { // ☆ ★
-                starstring += (index < this.rate) ? '★' : '☆'
+                starstring += (index < this.tech.rate) ? '★' : '☆'
             }
             return starstring
         }
@@ -34,6 +34,8 @@ export default {
         margin: 15px;
         flex: 1;
         max-width: 200px;
+        display: flex;
+        flex-direction: column;
     }
     .card > * {
         text-align: center;
@@ -48,6 +50,7 @@ export default {
     .tags {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .tag {
@@ -55,6 +58,12 @@ export default {
         background-color: lightblue;
         border-radius: 5px;
         margin: 3px;
+        cursor: pointer;
+        padding: 3px;
+    }
+
+    .subtitle {
+        flex-grow: 1;
     }
 
 </style>
