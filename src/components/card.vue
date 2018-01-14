@@ -2,7 +2,7 @@
     <div class="card" :title="tech.info">
         <div class="title">{{tech.name}}</div>
         <div class="rate">{{stars}}</div>
-        <div class="subtitle">{{tech.title}}</div>
+        <div class="subtitle" v-html="tech.title"></div>
         <div v-if="tech.tags" class="tags">
             <span class="tag" v-for="tag in tech.tags">{{tag}}</span>
         </div>
@@ -58,7 +58,6 @@ export default {
         background-color: lightblue;
         border-radius: 5px;
         margin: 3px;
-        cursor: pointer;
         padding: 3px;
     }
 

@@ -40,6 +40,8 @@ export default {
                 { name: 'GIT', rate: 4, title: 'I know how to use it and how to solve problems when they happens. I were the "git guy" at some point of my life', info: '"Delete your folder and clone it again" wasn\'t my first idea, too!', tags: ['Git from command line', 'Sourcetree']},
                 { name: 'Algorithms and Data Structures', rate: 4, title: 'Studied at university in a very deep way', info: 'It\'s a tough job, but someone has to do it', tags: ['Complexity', 'Efficiency']},
                 { name: 'Node.js and npm', rate: 4, title: 'Used both of them a lot for work and sideprojects, also to manage libraries', info: 'npm install auto-write-website-info --save-dev', tags: ['Express', 'npm install', 'Sails.js', 'gunDB', 'package.json']},
+                { name: 'VueJS', rate: 4, title: 'I\'ve recently completed <a target="blank" href="https://www.udemy.com/certificate/UC-WESI14A5/">this course</a> on Udemy. And, this website is build in VueJS!', info: 'vue init webpack-simple selfCreatedNewShinyPersonalWebsite', tags: ['Vuex', 'Vue Router', 'vue-cli', 'vue-resource', 'authentication', 'firebase', 'axios', 'vuelidate']},
+                
             ],
             searchResults: [
                 { name: 'TODO', rate: 1, title: 'I haven\'t implemented this feature, yet :(', info: 'Soon, promise', tags: ['//TODO', 'Set-reminder', 'Set-alarm-at-5-am']},
