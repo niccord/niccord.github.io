@@ -115,4 +115,11 @@ a, a:visited {
   margin-bottom: 10px;
 }
 
+.mansion-list > li {
+  display: list-item;
+  list-style-type: circle;
+  margin-left: 16px;
+  padding: 0px;
+}
+
 </style>
