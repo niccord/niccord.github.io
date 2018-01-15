@@ -44,13 +44,3 @@
       </ul>
   </div>
 </template>
-
-<style>
-.mansion-list > li {
-  display: list-item;
-  list-style-type: circle;
-  margin-left: 16px;
-  padding: 0px;
-}
-</style>
-
