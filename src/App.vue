@@ -109,4 +109,10 @@ a, a:visited {
   margin-left: 40px;
 }
 
+.list > li {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 </style>
