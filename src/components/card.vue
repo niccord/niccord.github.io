@@ -34,6 +34,7 @@ export default {
         margin: 15px;
         flex: 1;
         max-width: 300px;
+        min-width: 160px;
         display: flex;
         flex-direction: column;
     }
