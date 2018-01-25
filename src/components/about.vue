@@ -1,10 +1,10 @@
 <template>
     <div>
-        <h1 class="pagetitle">Nicola Cordioli</h1>
-        <h1>Senior fullstack web developer</h1>
-        <h2>What do I know?</h2>
-        <h2>Do I know things??</h2>
-        <h2>Let's find out!</h2>
+        <h1 class="pagetitle myname">NICOLA CORDIOLI</h1>
+        <h1 class="gameshow-title">Senior Fullstack Web Developer</h1>
+        <h2 class="gameshow-title">WHAT DO I KNOW?</h2>
+        <h2 class="gameshow-title">DO I KNOW THINGS??</h2>
+        <h2 class="gameshow-title">LET'S FIND OUT!</h2>
         <br>
         <br>
         <br>
@@ -56,19 +56,60 @@ export default {
 </script>
 
 <style>
-    .hot, .searchbar, .others {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .searchbar > input {
-        background-color: white;
-        border-radius: 10px;
-        margin: 10px;
-        padding: 8px;
-        border-width: 0px;
-        width: 350px;
-    }
+.hot, .searchbar, .others {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.searchbar > input {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 8px;
+    border-width: 0px;
+    width: 350px;
+}
+
+.myname {
+    font-size: 75px;
+    font-family: Impact;
+}
+
+.myname:hover {
+    -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon3 1.5s ease-in-out infinite alternate;
+    animation: neon3 1.5s ease-in-out infinite alternate;
+}/*
+@-webkit-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 120px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+  }
+}
+
+@-moz-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 120px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+  }
+}*/
+
+@keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 120px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+  }
+}
+
+.gameshow-title {
+    font-size: 60px;
+}
 
 </style>

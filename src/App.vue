@@ -67,8 +67,9 @@ export default {
 
 h1, h2 {
   color: #FF64FF;
-  font-weight: normal;
   text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 ul {
