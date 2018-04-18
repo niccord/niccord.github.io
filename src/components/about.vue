@@ -10,15 +10,15 @@
         <br>
         <h1 class="pagetitle">Hot</h1>
         <div class="hot">
-            <app-card v-for="i in hot" :tech="i"></app-card>
+            <app-card v-for="i in hot" :tech="i" :key="i"></app-card>
         </div>
         <h1 class="pagetitle">Others</h1>
         <div class="searchbar">
             <input type="text" v-model.trim="search" name="search" id="search" title="Search" placeholder="Search" >
         </div>
         <div class="others">
-            <app-card v-if="search == ''" v-for="i in others" :tech="i"></app-card>
-            <app-card v-if="search != ''" v-for="i in searchResults" :tech="i"></app-card>
+            <app-card v-if="search == ''" v-for="i in others" :tech="i" :key="i"></app-card>
+            <app-card v-if="search != ''" v-for="i in searchResults" :tech="i" :key="i"></app-card>
         </div>
     </div>
 </template>
@@ -36,8 +36,8 @@ export default {
                 { name: 'SQL', rate: 5, title: 'Used and studied a lot from simple queries to stored procedures always with an eye on performance', info: 'Someone said CLR stored procedures?', tags: ['SQLServer', 'Oracle', 'MySql']}
             ],
             others: [
-                { name: 'CSS', rate: 3, title: 'Still learning a lot', info: 'Not my primary job, but I can do a thing or two :)', tags: ['CSS3', 'Animations', 'Flexbox']},
-                { name: 'GIT', rate: 4, title: 'I know how to use it and how to solve problems when they happens. I were the "git guy" at some point of my life', info: '"Delete your folder and clone it again" wasn\'t my first idea, too!', tags: ['Git from command line', 'Sourcetree']},
+                { name: 'CSS', rate: 3, title: 'Still learning a lot', info: 'Not my primary job, but I can do a thing or two :)', tags: ['CSS3', 'Animations', 'Flexbox', 'CSSGrid']},
+                { name: 'GIT', rate: 4, title: 'I know how to use it and how to solve problems when they happens. I were the "git guy" at some point in my life', info: '"Delete your folder and clone it again" wasn\'t my first idea, too!', tags: ['Git from command line', 'Sourcetree']},
                 { name: 'Algorithms and Data Structures', rate: 4, title: 'Studied at university in a very deep way', info: 'It\'s a tough job, but someone has to do it', tags: ['Complexity', 'Efficiency']},
                 { name: 'Node.js and npm', rate: 4, title: 'Used both of them a lot for work and sideprojects, also to manage libraries', info: 'npm install auto-write-website-info --save-dev', tags: ['Express', 'npm install', 'Sails.js', 'gunDB', 'package.json']},
                 { name: 'VueJS', rate: 4, title: 'I\'ve recently completed <a target="blank" href="https://www.udemy.com/certificate/UC-WESI14A5/">this course</a> on Udemy. And, this website is build in VueJS!', info: 'vue init webpack-simple selfCreatedNewShinyPersonalWebsite', tags: ['Vuex', 'Vue Router', 'vue-cli', 'vue-resource', 'authentication', 'firebase', 'axios', 'vuelidate']},
