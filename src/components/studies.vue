@@ -10,7 +10,7 @@
             Bachelor degree in Information Technology - 92/110
           </p>
           <ul class="mansion-list">
-            <li>Alorithms and Data Structures</li>
+            <li>Algorithms and Data Structures</li>
             <li>Efficiency</li>
             <li>Complexity</li>
             <li>Concept of calculability</li>

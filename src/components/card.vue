@@ -4,7 +4,7 @@
         <div class="rate">{{stars}}</div>
         <div class="subtitle" v-html="tech.title"></div>
         <div v-if="tech.tags" class="tags">
-            <span class="tag" v-for="tag in tech.tags">{{tag}}</span>
+            <span class="tag" v-for="tag in tech.tags" :key="tag">{{tag}}</span>
         </div>
     </div>
 </template>
